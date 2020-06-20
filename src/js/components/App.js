@@ -1,41 +1,46 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import ReactDOM from "react-dom";
 
 import Avatar from "./Avatar"
 import SocialMedia from "./SocialMedia"
 import Gallery from "./Gallery"
 
-import AvatarImage from "./../../../assets/images/avatar.jpg";
+import AvatarImage from "./../../images/avatar.jpg";
 
-class App extends Component {
+export default class App extends PureComponent {
   constructor() {
     super();
   }
 
   render() {
     return (
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col">
             <Avatar image={AvatarImage}/>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <SocialMedia/>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <Gallery/>
           </div>
         </div>
+        <footer>
+          <div className="row">
+            <div className="col">
+              <span>&copy; Diego Baños Fariñas 2020</span>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }
 }
-
-export default App;
 
 const wrapper = document.getElementById("container");
 wrapper ? ReactDOM.render(<App />, wrapper) : false;

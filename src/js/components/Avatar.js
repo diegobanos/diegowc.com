@@ -1,22 +1,19 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { PureComponent } from "react";
 
-class Avatar extends Component {
+export default class Avatar extends PureComponent {
   constructor() {
     super();
   }
 
   render() {
     return (
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <img src={this.props.image} class="img-fluid rounded-circle mx-auto d-block"/>
+      <div className="container-fluid avatar">
+        <div className="row">
+          <div className="col">
+            <img src={this.props.image} className="shadow-lg img-fluid rounded-circle mx-auto d-block"/>
           </div>
         </div>
       </div>
     );
   }
 }
-
-export default Avatar;

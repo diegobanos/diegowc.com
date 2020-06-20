@@ -1,0 +1,63 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background: linear-gradient(90deg, #0f2047 0%, #0d172c 100%);
+  padding-top: 15vh;
+}
+
+.avatar img {
+  height: 20vh;
+}
+
+.social-media {
+  margin-top: 10vh;
+}
+
+.social-media img {
+  height: 8vh;
+}
+
+.gallery {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.gallery .grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.gallery .grid-sizer,
+.gallery .grid-item {
+  width: 33.333%;
+}
+
+.gallery .grid-item {
+  float: left;
+}
+
+.gallery .grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+.gallery img {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  transition: 0.3s ease-in;
+}
+
+.gallery img:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(0%);
+}
+
+footer {
+  color: #df3a3a;
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding-bottom: 2vh;
+  text-align: center;
+}
